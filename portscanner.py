@@ -3,7 +3,7 @@ import sys
 import socket 
 from datetime import datetime 
    
-ascii_banner = pyfiglet.figlet_format("PORT SCANNER") 
+ascii_banner = pyfiglet.figlet_format("pyHacks PORT SCANNER") 
 print(ascii_banner) 
    
 # Defining a target 
@@ -30,15 +30,15 @@ try:
         # returns an error indicator 
         result = s.connect_ex((target,port)) 
         if result ==0: 
-            print("Port {} is open".format(port)) 
+            print("Port {} is open ;)".format(port)) 
         s.close() 
           
 except KeyboardIntruppt: 
-        print("\n Exitting Program !!!!") 
+        print("\n Exiting Program :( !!!!") 
         sys.exit() 
 except socket.gaierror: 
-        print("\n Hostname Could Not Be Resolved !!!!") 
+        print("\n Hostname Could Not Be Resolved :( !!!!") 
         sys.exit() 
 except socket.error: 
-        print("\ Server not responding !!!!") 
+        print("\ Server not responding :( !!!!") 
         sys.exit() 
